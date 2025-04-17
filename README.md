@@ -1,6 +1,7 @@
 # URL Shortener API
 
-A RESTful API service built with Java and Spring Boot that allows users to shorten long URLs, similar to services like Bitly or TinyURL.
+A RESTful API service built with Java and Spring Boot that allows users to shorten long URLs, similar to services like
+Bitly or TinyURL.
 
 ## Features
 
@@ -61,6 +62,7 @@ src/
 ## API Endpoints
 
 ### Create Short URL
+
 - **POST** `/shorten`
 - Request Body:
   ```json
@@ -80,6 +82,7 @@ src/
   ```
 
 ### Get Original URL
+
 - **GET** `/shorten/{shortCode}`
 - Response (200 OK):
   ```json
@@ -93,6 +96,7 @@ src/
   ```
 
 ### Update URL
+
 - **PUT** `/shorten/{shortCode}`
 - Request Body:
   ```json
@@ -112,10 +116,12 @@ src/
   ```
 
 ### Delete URL
+
 - **DELETE** `/shorten/{shortCode}`
 - Response (204 No Content)
 
 ### Get URL Statistics
+
 - **GET** `/shorten/{shortCode}/stats`
 - Response (200 OK):
   ```json
@@ -132,10 +138,12 @@ src/
 ## Setup and Installation
 
 ### Prerequisites
+
 - Java 17 or higher
 - Maven 3.6 or higher
 
 ### Steps to Run
+
 1. Clone the repository
    ```
    git clone https://github.com/bdkamaci/url-shortening-service.git
@@ -159,6 +167,7 @@ src/
 You can use the following Postman examples to test the API:
 
 ### 1. Create a short URL
+
 - **Method**: POST
 - **URL**: `http://localhost:8080/shorten`
 - **Headers**: Content-Type: application/json
@@ -170,10 +179,12 @@ You can use the following Postman examples to test the API:
   ```
 
 ### 2. Get original URL
+
 - **Method**: GET
 - **URL**: `http://localhost:8080/shorten/{shortCode}`
 
 ### 3. Update URL
+
 - **Method**: PUT
 - **URL**: `http://localhost:8080/shorten/{shortCode}`
 - **Headers**: Content-Type: application/json
@@ -185,10 +196,12 @@ You can use the following Postman examples to test the API:
   ```
 
 ### 4. Get URL statistics
+
 - **Method**: GET
 - **URL**: `http://localhost:8080/shorten/{shortCode}/stats`
 
 ### 5. Delete URL
+
 - **Method**: DELETE
 - **URL**: `http://localhost:8080/shorten/{shortCode}`
 
@@ -202,6 +215,11 @@ You can use the following Postman examples to test the API:
 - Add comprehensive logging
 - Implement caching for frequently accessed URLs
 - Add expiration date for short URLs
+
+## Acknowledgments
+
+- SpringBoot Documentation
+- https://roadmap.sh/projects/url-shortening-service
 
 ## License
 
